@@ -6,7 +6,7 @@ public class Card {
     public Card( int cardNumber, User user, int cardMoney) {
         this.cardNumber = cardNumber;
         this.owner = user.getName();
-        this.cardMoney = cardMoney;
+        Card.cardMoney = cardMoney;
     }
 
     public int getCardNumber() {
@@ -30,27 +30,8 @@ public class Card {
     }
 
     public void setCardMoney(int cardMoney) {
-        this.cardMoney = cardMoney;
+        Card.cardMoney = cardMoney;
     }
-
-//    public void withdrawMoney(int desiredAmount, ATM atm) {
-//        if (desiredAmount <= getCardMoney() && desiredAmount <= atm.getAtmMoney()) {
-//            System.out.println("Деньги сняты");
-//            cardMoney = cardMoney - desiredAmount;
-//        } else if (desiredAmount > getCardMoney()) {
-//            try {
-//                throw new LackMoneyException();
-//            } catch (LackMoneyException e) {
-//                System.out.println("Недостаточно средст на карте");
-//            }
-//        } else if (desiredAmount > atm.getAtmMoney()) {
-//            try {
-//                throw new LackMoneyException();
-//            } catch (LackMoneyException e) {
-//                System.out.println("Недостаточно средст в банкомате");
-//            }
-//        }
-//    }
 
     public void seeAccountBalance() {
         System.out.println(getCardMoney());

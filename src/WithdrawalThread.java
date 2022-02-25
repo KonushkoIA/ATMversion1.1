@@ -37,44 +37,5 @@ public class WithdrawalThread implements Runnable{
     @Override
     public void run() {
         manager.getMoney(this.card, this.atm, this.desiredAmount);
-//            if (desiredAmount <= card.getCardMoney() && desiredAmount <= atm.getAtmMoney()) {
-//                int cardMoney = card.getCardMoney();
-//                cardMoney = cardMoney - desiredAmount;
-//                card.setCardMoney(cardMoney);
-//                System.out.println("Деньги сняты");
-//            } else if (desiredAmount > card.getCardMoney()) {
-//                try {
-//                    throw new LackMoneyException();
-//                } catch (LackMoneyException e) {
-//                    System.out.println("Недостаточно средст на карте");
-//                }
-//            } else if (desiredAmount > atm.getAtmMoney()) {
-//                try {
-//                    throw new LackMoneyException();
-//                } catch (LackMoneyException e) {
-//                    System.out.println("Недостаточно средст в банкомате");
-//                }
-//            }
-
     }
-//    public void withdrawMoney(int desiredAmount, ATM atm, Card card){
-//        if (desiredAmount <= card.getCardMoney() && desiredAmount <= atm.getAtmMoney()) {
-//            System.out.println("Деньги сняты");
-//            int cardMoney = card.getCardMoney();
-//            cardMoney = cardMoney - desiredAmount;
-//            card.setCardMoney(cardMoney);
-//        } else if (desiredAmount > card.getCardMoney()) {
-//            try {
-//                throw new LackMoneyException();
-//            } catch (LackMoneyException e) {
-//                System.out.println("Недостаточно средст на карте");
-//            }
-//        } else if (desiredAmount > atm.getAtmMoney()) {
-//            try {
-//                throw new LackMoneyException();
-//            } catch (LackMoneyException e) {
-//                System.out.println("Недостаточно средст в банкомате");
-//            }
-//        }
-//    }
 }
